@@ -2,17 +2,17 @@ class BankAccount
 {
     constructor(userFirstName, userLastName, age, gender, address, pin, balance)
     {
-        self.userFirstName = userFirstName;
-        self.userLastName = userLastName;
-        self.age = age;
-        self.gender = gender;
-        self.address = address;
-        self.pin = pin;
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.age = age;
+        this.gender = gender;
+        this.address = address;
+        this.pin = pin;
 
-        self.accountNumber = generateAccountNumber();
+        this.accountNumber = this.generateAccountNumber();
         
-        if (this.checkStartingBalance())
-            self.balance = balance;
+        if (this.checkStartingBalance(balance))
+            this.balance = balance;
         else
             console.error("Balance too low to open an account.");
     }
@@ -28,8 +28,8 @@ class BankAccount
     }
 
     generateAccountNumber(){
-        num = "";
-        for (i = 0; i < 20; i++)
+        let num = "";
+        for (let i = 0; i < 20; i++)
         {
             num += String(Math.floor(Math.random() * 9));
         }
@@ -40,7 +40,7 @@ class BankAccount
     {
         if(moneyIn > 0)
         {
-            self.balance = self.balance + moneyIn;
+            this.balance = this.balance + moneyIn;
         }
         else
         {
@@ -49,3 +49,5 @@ class BankAccount
         }
     }
 }
+
+module.exports = BankAccount
