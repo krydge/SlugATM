@@ -1,8 +1,9 @@
+import '../App.css'
+
 function NoPage(){
     return(
-        <>
-        <h1>404</h1>
-        </>
+        <body>
+        </body>
     )
 }
 

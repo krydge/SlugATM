@@ -11,7 +11,6 @@ function App() {
     <Routes>
       <Route path="/" >
       <Route index element={<ATM />} /><Route path="SlugBank" element={<Bank />} />
-
         <Route path="*" element={<NoPage />} />
       </Route>
     </Routes>
