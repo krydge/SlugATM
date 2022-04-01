@@ -1,10 +1,10 @@
 class BankAccount
 {
-    constructor(userFirstName, userLastName, age, gender, address, pin, balance)
+    constructor(userFirstName, userLastName, birthDate, gender, address, pin, balance)
     {
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
-        this.age = age;
+        this.birthDate = birthDate;
         this.gender = gender;
         this.address = address;
         this.pin = pin;
@@ -47,6 +47,10 @@ class BankAccount
             console.error("Invalid input");
             throw "invalid deposite amount";
         }
+    }
+
+    withdraw(moneyOut){
+        
     }
 }
 

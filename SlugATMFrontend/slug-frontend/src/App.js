@@ -8,13 +8,14 @@ import Bank from "./Pages/Bank";
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" >
-      <Route index element={<ATM />} /><Route path="SlugBank" element={<Bank />} />
-        <Route path="*" element={<NoPage />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
+      <Routes>
+        <Route path="/" >
+          <Route index element={<ATM />} />
+          <Route path="SlugBank" element={<Bank />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
